@@ -4,7 +4,7 @@
 
 ## Descripción General
 
-Es un archivo simple, servirá para lograr adquirir la habiliad para poder tener habilidades de desarrollador
+Es un archivo simple, servirá para lograr adquirir la habiliad y poder entender el mundo del desarrollador
 
 ## Caracteristicas
 
