@@ -1,1 +1,46 @@
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+{
+  "@context": "http://schema.org", // Siempre es esto. Es el vocabulario que usamos (Schema.org)
+  "@type": "LocalBusiness",        // <-- Tipo de entidad. Aquí es donde clasificas tu negocio.
+  "name": "Panadería El Horno Dorado", // <-- Nombre oficial de tu panadería
+  "image": "https://www.tupanaderia.com/img/fachada-panaderia.jpg", // <-- URL de una imagen representativa (logo, fachada)
+  "address": {                     // <-- Un objeto para la dirección. Es un sub-conjunto de datos.
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Falsa 123", // <-- Calle y número
+    "addressLocality": "[Tu Ciudad]",  // <-- Ciudad (ej. Ciudad de México)
+    "addressRegion": "[Tu Estado/Provincia]", // <-- Estado/Provincia (ej. CDMX)
+    "postalCode": "12345",              // <-- Código postal
+    "addressCountry": "MX"              // <-- Código de país ISO 3166-1 alpha-2 (ej. MX para México)
+  },
+  "url": "https://www.tupanaderia.com", // <-- URL principal de tu sitio web
+  "telephone": "+52-55-1234-5678",      // <-- Número de teléfono con código de país
+  "priceRange": "$$",                 // <-- Rango de precios ($, $$, $$$, $$$$)
+  "openingHoursSpecification": [     // <-- Un array (lista) de objetos para los horarios de apertura
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" // <-- Días de la semana
+      ],
+      "opens": "07:00", // <-- Hora de apertura (formato HH:MM 24h)
+      "closes": "20:00" // <-- Hora de cierre (formato HH:MM 24h)
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+    // Puedes añadir más objetos para Domingo si es diferente, o para feriados, etc.
+  ],
+  "geo": {                          // <-- Un objeto para las coordenadas geográficas
+    "@type": "GeoCoordinates",
+    "latitude": "19.4326",         // <-- Latitud de tu ubicación
+    "longitude": "-99.1332"        // <-- Longitud de tu ubicación
+  },
+  "hasMap": "https://maps.app.goo.gl/TuMapaGoogle", // <-- URL de tu mapa de Google Maps (opcional)
+  "description": "Panadería artesanal con más de 20 años de tradición. Especializados en pan de masa madre y repostería fina.", // <-- Descripción de tu negocio
+  "aggregateRating": {             // <-- Objeto para la calificación promedio (si tienes reseñas)
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",         // <-- Valor de calificación (ej. 4.8 de 5)
+    "reviewCount": "125"          // <-- Número total de reseñas
+  }
+}
