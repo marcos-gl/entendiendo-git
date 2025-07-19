@@ -11,3 +11,15 @@ header {
     color: #fff;
     padding: 20px;
 }
+
+.cursiva {
+    font-style: italic;
+}
+
+.ia {
+    color: #c49512;
+}
+
+.ia:hover {
+    color: #00ff00;
+}
